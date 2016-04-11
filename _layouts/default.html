@@ -6,15 +6,20 @@
   <body>
 
     {% include header.html %}
-
+    <div class="banner-content">
+      <div class="wrapper">
+        
+      </div>
+    </div>
     <div class="page-content">
       <div class="wrapper">
+        {% include sharing.html %}
         {{ content }}
       </div>
     </div>
 
     {% include footer.html %}
 
+    <script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
   </body>
-
 </html>
