@@ -34,12 +34,12 @@
     }
 
     .page-link {
-        color: $text-color;
+        color: $link-color;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1px;
         line-height: $base-line-height;
-        text-decoration: uppercase;
+        text-transform: uppercase;
 
         &:hover {
             text-decoration: none;
