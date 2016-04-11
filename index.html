@@ -4,22 +4,16 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">{{ site.github.project_title }}</h1>
+    <h1 class="page-heading">{{ site.github.project_title }}</h1>
 
-  <ul class="portfolio">
-    {% for repo in site.github.public_repositories limit:28 %}
- 
-        {% if repo.fork != true %}
-            <li class="repo">
-               
-                <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-             
-            </li>
-        {% endif %}
- 
-    {% endfor %}
-</ul>
+    <ul class="portfolio">
+        {% for repo in site.github.public_repositories limit:28 %} {% if repo.fork != true %}
+        <li class="repo">
+            <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+        </li>
+        {% endif %} {% endfor %}
+    </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <p class="rss">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
 
 </div>
