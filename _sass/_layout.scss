@@ -35,7 +35,11 @@
 
     .page-link {
         color: $text-color;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
         line-height: $base-line-height;
+        text-decoration: uppercase;
 
         &:hover {
             text-decoration: none;
