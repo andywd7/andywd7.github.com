@@ -7,12 +7,31 @@ layout: default
     <h1 class="page-heading">{{ site.github.project_title }}</h1>
 
     <ul class="portfolio">
-        {% for repo in site.github.public_repositories limit:28 %} {% if repo.fork != true %}
-        <li class="repo">
-            <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-        </li>
-        {% endif %} {% endfor %}
+        {% for repo in site.github.public_repositories limit:28 %}
+            {% if repo.fork != true %}
+                <li class="repo">
+                    <a href="{{ repo.html_url }}">{{ repo.name }}</a>
+                </li>
+            {% endif %} 
+        {% else %}
+            <li class="repo">There are no repositories.</li>    
+        {% endfor %}
     </ul>
+    
+    {% for post in site.posts %}
+        <article class="post">
+
+            <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+
+            <div class="entry">
+                {{ post.excerpt }}
+            </div>
+
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+        </article>
+    {% else %}
+        <p>There are no posts.</p>
+    {% endfor %}
 
     <p class="rss">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
 
