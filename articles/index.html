@@ -1,9 +1,9 @@
 ---
 layout: default
+title: Articles
 ---
 
 <div class="home">
-    
     <div class="banner-content">
 
         {% for post in site.posts limit:1 %}
@@ -53,15 +53,5 @@ layout: default
     {% else %}
     <p>There are no posts.</p>
     {% endfor %}
-
-    <ul class="portfolio">
-        {% for repo in site.github.public_repositories limit:6 %} {% if repo.fork != true %}
-        <li class="repo">
-            <a href="{{ repo.html_url }}">{{ repo.name }}</a>
-        </li>
-        {% endif %} {% else %}
-        <li class="repo">There are no repositories.</li>
-        {% endfor %}
-    </ul>
 
 </div>
