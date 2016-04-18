@@ -3,8 +3,7 @@
  */
 .site-header {
     background-color: #fff;
-    //border-top: 5px solid $brand-color;
-    border-bottom: 4px solid $brand-color;
+    //border-bottom: 4px solid $brand-color;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -35,10 +34,12 @@
 
     .page-link {
         color: $link-color;
+        display: block;
         font-size: 14px;
         font-weight: 700;
         letter-spacing: 1px;
         line-height: $base-line-height;
+        padding: 10px;
         text-transform: uppercase;
 
         &:hover {
@@ -82,6 +83,12 @@
         .trigger {
             clear: both;
             display: none;
+            list-style-type: none;
+            margin: 0;
+            
+            > li {
+                float: left;
+            }
         }
 
         &:hover .trigger {
@@ -90,7 +97,6 @@
         }
 
         .page-link {
-            display: block;
             padding: 5px 10px;
 
             &:not(:last-child) {
