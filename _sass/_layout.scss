@@ -31,6 +31,16 @@
     .menu-icon {
         display: none;
     }
+    
+    .trigger {
+        @extend %clearfix;
+        list-style-type: none;
+        margin: 0;
+            
+            > li {
+                float: left;
+            }
+    }
 
     .page-link {
         color: $link-color;
@@ -83,12 +93,6 @@
         .trigger {
             clear: both;
             display: none;
-            list-style-type: none;
-            margin: 0;
-            
-            > li {
-                float: left;
-            }
         }
 
         &:hover .trigger {
