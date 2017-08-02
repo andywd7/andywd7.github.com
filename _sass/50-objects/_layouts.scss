@@ -1,0 +1,46 @@
+﻿//
+// Layouts
+//
+
+.site {
+  height: auto !important;
+  height: auto;
+  margin-bottom: ($site-footer-height * -1);
+  min-height: 100%;
+}
+
+.wrapper {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $global-spacing-unit;
+  padding-right: $global-spacing-unit;
+  width: 100%;
+}
+
+.wrapper--site {
+	max-width: 1200px;
+}
+
+.siteMain {
+	@include clearfix;
+	position: relative;
+}
+
+.content {
+  .wrapper {
+    margin-top: -8rem;
+  }
+}
+
+.siteFooter {
+  background-color: $off-black;
+  color: $white;
+  padding-top: $global-spacing-unit;
+  padding-bottom: $global-spacing-unit;
+}
+
+.siteFooter,
+.site__push {
+  height: $site-footer-height;
+}

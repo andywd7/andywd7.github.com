@@ -1,0 +1,19 @@
+{
+  "name": "kit",
+  "version": "1.0.0",
+  "description": "starter kit",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "sass-mq": "^3.3.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andy Denham",
+  "license": "ISC"
+}

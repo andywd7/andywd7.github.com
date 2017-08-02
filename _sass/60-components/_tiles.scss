@@ -1,0 +1,89 @@
+﻿//
+// Tiles
+//
+
+.tile {
+  @include clearfix;
+	border-bottom: 1px solid #ccc;
+  margin-bottom: $global-spacing-unit;
+  padding-bottom: $global-spacing-unit;
+	position: relative;
+
+  @include mq($from: mobile) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.tile__img {
+	float: left;
+  margin-bottom: 0;
+  padding-right: 10px;
+  width: 40%;
+
+  @include mq($from: mobile) {
+    float: none;
+		padding-right: 0;
+		margin-bottom: ($global-spacing-unit / 2);
+		width: 100%;
+  }
+
+	@include mq($from: desktop) {
+		margin-bottom: $global-spacing-unit;
+  }
+}
+
+.tile__content {
+	float: left;
+	width: 60%;
+
+	@include mq($from: mobile) {
+		float: none;
+		width: 100%;
+	}
+}
+
+.tile__title {
+  font-size: rem(18px);
+  line-height: 1.2;
+  margin-bottom: ($global-spacing-unit / 2);
+
+  @include mq($from: desktop) {
+    font-size: rem(24px);
+  }
+
+  a {
+    color: $black;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $link-color;
+    }
+
+    &:before {
+      bottom: 0;
+      content: '';
+      display: block;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+  .tile__info {
+    color: #888;
+    font-size: rem(14px);
+    line-height: 1.3;
+    margin-bottom: 0;
+		position: relative;
+		z-index: 1;
+
+		@include mq($from: desktop) {
+			font-size: rem(16px);
+		}
+  }

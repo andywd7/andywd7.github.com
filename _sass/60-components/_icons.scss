@@ -1,0 +1,44 @@
+//
+// Icons
+// Quick way to add icons, .svgs would be a nicer/more accessible option
+
+@font-face {
+  font-family: 'valtech';
+  src:  url('#{$font-path}/valtech.eot?iunvw0');
+  src:  url('#{$font-path}/valtech.eot?iunvw0#iefix') format('embedded-opentype'),
+    url('#{$font-path}/valtech.ttf?iunvw0') format('truetype'),
+    url('#{$font-path}/valtech.woff?iunvw0') format('woff'),
+    url('#{$font-path}/valtech.svg?iunvw0#valtech') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="c-icon-"], [class*=" c-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'valtech' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+}
+
+.icon-user {
+  &:before {
+    content: $c-icon-user;
+  }
+}
+
+.icon-menu {
+  &:before {
+    content: $c-icon-menu;
+  }
+}
+
+.icon-cross {
+	font-size: 16px;
+
+	&:before {
+		content: $c-icon-cross;
+	}
+}

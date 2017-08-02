@@ -1,0 +1,22 @@
+﻿//
+// Page
+//
+
+html {
+  background-color: $white;
+  font-size: 100%;
+  font-weight: 400;
+  height: 100%;
+  line-height: $global-line-height;
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  color: $global-font-color;
+  font-family: $global-font-family;
+  height: 100%;
+}

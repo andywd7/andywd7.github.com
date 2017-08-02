@@ -1,0 +1,38 @@
+﻿//
+// Site Header
+//
+
+.siteHeader {
+  background-color: $white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+	/*.wrapper {
+    @include mq($from: tablet) {
+		  padding-right: 0;
+    }
+	}*/
+
+  a {
+    color: $global-font-color;
+  }
+}
+
+.siteHeader__logo {
+  float: left;
+  height: $site-header-height;
+  line-height: $site-header-height;
+  margin-bottom: 0;
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+
+  @include mq($from: tablet) {
+    float: left;
+    height: $site-header-height-lg;
+    line-height: $site-header-height-lg;
+  }
+}

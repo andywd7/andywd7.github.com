@@ -1,0 +1,15 @@
+﻿//
+// Links
+//
+
+a {
+  text-decoration: none;
+  color: $link-color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}

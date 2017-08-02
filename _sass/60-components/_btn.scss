@@ -1,0 +1,61 @@
+.btnClose {
+	background-color: rgba(0, 0, 0, 0.3);
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+	font-size: rem(18px);
+	height: rem(30px);
+	line-height: rem(30px);
+	position: absolute;
+	text-align: center;
+	width: rem(30px);
+
+	&:hover,
+	&:focus {
+		background-color: rgba(0,0,0,0.6);
+	}
+}
+
+.btnClose--siteNav {
+	background-color: transparent;
+}
+
+.btnClose--flyout {
+	right: $global-spacing-unit;
+}
+
+.btnOpen {
+  color: $white;
+	cursor: pointer;
+	display: inline-block;
+	height: $site-header-height;
+	line-height: $site-header-height;
+	padding-left: $global-spacing-unit;
+	padding-right: $global-spacing-unit;
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		background-color: rgba(0,0,0,0.6);
+	}
+
+	@include mq($from: tablet) {
+    height: $site-header-height-lg;
+		line-height: $site-header-height-lg;
+	}
+}
+
+.btnOpen--siteNav {
+	font-size: rem(26px);
+	vertical-align: middle;
+
+	.siteNav__icon {
+		line-height: 1;
+	}
+}
+.btnOpen--siteNav,
+.btnClose--siteNav {
+	@include mq($from: tablet) {
+		display: none;
+	}
+}

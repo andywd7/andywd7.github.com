@@ -1,0 +1,44 @@
+﻿//
+// Site Header
+//
+
+.sectionFeature {
+  background-color: $off-white;
+  min-height: 500px;
+
+  .sectionFeature__title {
+    font-size: 48px;
+    padding-top: 5rem;
+    width: 75%;
+
+    &::after {
+      background-color: $highlight;
+      content: '';
+      display: block;
+      height: 3px;
+      margin-top: 2rem;
+      margin-bottom: 3rem;
+      max-width: 150px;
+      width: 30%;
+    }
+  }
+}
+
+.siteHeader__logo {
+  float: left;
+  height: $site-header-height;
+  line-height: $site-header-height;
+  margin-bottom: 0;
+
+  a:hover,
+  a:focus,
+  a:active {
+    text-decoration: none;
+  }
+
+  @include mq($from: tablet) {
+    float: left;
+    height: $site-header-height-lg;
+    line-height: $site-header-height-lg;
+  }
+}

@@ -4,53 +4,56 @@
 @charset "utf-8";
 
 
-
-// Our variables
-$base-font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$link-color:       #444;
-$background-color: #f9f9fb;
-$brand-color:      #2d55f0;
-
-$brand-black:      #25292c;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    1000px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
+// To enable support for browsers that do not support @media queries,
+// (IE <= 8, Firefox <= 3, Opera <= 9) set $x-old-ie: to false
+// Create a separate stylesheet served exclusively to these browsers,
+// meaning @media queries will be rasterized, relying on the cascade itself
+$x-old-ie: true;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+  //* Has to go first as used in _variables
+  "20-tools/rems",
+  "../node_modules/sass-mq/mq",
+
+  // 10 SETTINGS
+  "10-settings/variables",
+  "10-settings/mq-override",
+
+
+  // 20 TOOLS
+  "20-tools/clearfix",
+  "20-tools/visibility",
+
+
+  // 30 GENERIC
+  "30-generic/normalize",
+  "30-generic/reset",
+
+
+  // 40 ELEMENTS
+  "40-elements/page",
+  "40-elements/links",
+  "40-elements/headings",
+
+
+  // 50 OBJECTS
+  "50-objects/grid",
+  "50-objects/layouts",
+
+
+  // 60 COMPONENTS
+  "60-components/sections",
+  "60-components/btn",
+  "60-components/siteHeader",
+  "60-components/flyout",
+  "60-components/siteNav",
+  "60-components/tiles",
+  "60-components/icons",
+
+
+  // 70 UTILITIES
+  "70-utilities/clearfix",
+  "70-utilities/visibility"
 ;

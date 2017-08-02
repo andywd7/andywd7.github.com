@@ -1,0 +1,57 @@
+﻿//
+// Variables
+//
+
+$colors: (
+  white:  #fff,
+  black:  000,
+  off-black: 222,
+  off-white: #f7f7f7,
+  highlight: #0063ff
+);
+
+$white: #fff;
+$black: #000;
+$off-black: #222;
+$off-white: #f7f7f7;
+$highlight: #0033dd;
+
+
+$global-font-color: #333;
+$global-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$global-font-size: 16px;
+$global-line-height: 1.4;
+$global-spacing-unit: rem($global-font-size);
+
+
+$link-color: $highlight;
+$link-hover-color: darken($highlight, 20);
+
+
+$header-font-family: Merriweather, Georgia, 'Times New Roman', serif;
+$header-font-weight: 300;
+$header-line-height: 1.2;
+$h1: rem(36px);
+$h2: rem(28px);
+$h3: rem(24px);
+$h4: rem(20px);
+$h5: rem(18px);
+$h6: rem(16px);
+
+
+$z: (
+  mobile:  560px,
+  tablet:  640px,
+  desktop: 1040px
+);
+
+
+$site-header-height: rem(40px);
+$site-header-height-lg: rem(60px);
+$site-footer-height: rem(90px);
+
+
+$font-path: "../../fonts";
+$c-icon-user: "\e971";
+$c-icon-menu: "\e9bd";
+$c-icon-cross: "\ea0f";

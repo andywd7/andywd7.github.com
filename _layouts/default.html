@@ -1,21 +1,33 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-GB">
+<!--[if IE 8]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html class="no-js ie9 x-ie8"><![endif]-->
+<!--[if gt IE 9]><!-->
+<html class="no-js x-ie8 x-ie9 x-oldIE" lang="en_GB">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+  <main id="mainContent" class="siteMain">
+    <div class="sectionFeature">
+      <div class="wrapper wrapper--site">
+        <h2 class="sectionFeature__title">Frontend designer, developer, researcher, problem solver, always learning</h2>
+        <h5>Currently teaching myself reactjs</h5>
       </div>
     </div>
+    <section class="content">
+      <div class="wrapper wrapper--site">
+        {{ content }}
+      </div>
+    </section>
+  </main>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-    <script src="{{ "/js/script.js" | prepend: site.baseurl }}"></script>
-    {% include analytics.html %}
-  </body>
+  <script src="{{ " /js/script.js " | prepend: site.baseurl }}"></script>
+  {% include analytics.html %}
+</body>
+
 </html>
