@@ -15,7 +15,7 @@ $x-old-ie: true;
 @import
   //* Has to go first as used in _variables
   "20-tools/rems",
-  "../node_modules/sass-mq/mq",
+  "20-tools/mq",
 
   // 10 SETTINGS
   "10-settings/variables",
